@@ -1,3 +1,7 @@
+## 1.0.2
+
+- Added animated GIF live showcase (`doc/screenshots/zero_chart_demo.gif`) and real-time multi-pane synchronized crosshair + L2 OrderBook depth streaming tour in `example/`.
+
 ## 1.0.1
 
 - Added high-resolution iOS Simulator showcase screenshots (`pubspec.yaml` gallery & `README.md`) and pre-activated multi-pane synchronized crosshair in the financial terminal example.

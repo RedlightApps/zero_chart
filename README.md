@@ -20,7 +20,9 @@
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/RedlightApps/zero_chart/main/doc/screenshots/zero_chart_showcase.png" width="360" alt="zero_chart 120Hz Multi-Pane Financial Terminal Showcase"/>
+<img src="https://raw.githubusercontent.com/RedlightApps/zero_chart/main/doc/screenshots/zero_chart_demo.gif" width="320" alt="zero_chart 120Hz Live Animated Demo"/>
+&nbsp;&nbsp;
+<img src="https://raw.githubusercontent.com/RedlightApps/zero_chart/main/doc/screenshots/zero_chart_showcase.png" width="320" alt="zero_chart 120Hz Multi-Pane Financial Terminal Showcase"/>
 
 </div>
 

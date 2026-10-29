@@ -1,12 +1,14 @@
 name: zero_chart
 description: 120Hz Element-Bypass financial & real-time telemetry charting engine for Flutter. Includes LTTB downsampling, OHLCV Candlestick, OrderBook L2 Depth chart, Technical Indicators (SMA, EMA, RSI, Bollinger), and Multi-Pane synchronized Crosshair. Zero external dependencies.
-version: 1.0.1
+version: 1.0.2
 homepage: https://redlightapps.com
 repository: https://github.com/RedlightApps/zero_chart
 issue_tracker: https://github.com/RedlightApps/zero_chart/issues
 documentation: https://github.com/RedlightApps/zero_chart#readme
 
 screenshots:
+  - description: "Live 120Hz Demo: Multi-Pane Synchronized Crosshair, Live OHLCV + Bollinger + RSI(14) & L2 OrderBook Depth Streaming"
+    path: doc/screenshots/zero_chart_demo.gif
   - description: "120Hz Multi-Pane OHLCV Candlestick, Bollinger Bands, Synchronized Crosshair RSI(14) & L2 OrderBook Depth Chart"
     path: doc/screenshots/zero_chart_showcase.png
 
