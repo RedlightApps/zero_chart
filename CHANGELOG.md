@@ -1,3 +1,7 @@
+## 1.0.1
+
+- Added high-resolution iOS Simulator showcase screenshots (`pubspec.yaml` gallery & `README.md`) and pre-activated multi-pane synchronized crosshair in the financial terminal example.
+
 ## 1.0.0
 
 - **Initial Stable Release of `zero_chart` by RedLight Apps (`https://redlightapps.com`).**

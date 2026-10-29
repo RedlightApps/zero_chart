@@ -24,12 +24,12 @@ class _ZeroChartShowcaseAppState extends State<ZeroChartShowcaseApp> {
   void initState() {
     super.initState();
     var price = 68200.0;
-    _candles = List<OhlcvCandle>.generate(80, (i) {
-      final delta = math.sin(i * 0.25) * 180.0 + (i.isEven ? 65.0 : -45.0);
+    _candles = List<OhlcvCandle>.generate(48, (i) {
+      final delta = math.sin(i * 0.32) * 210.0 + (i % 3 == 0 ? 95.0 : -55.0);
       final open = price;
       final close = open + delta;
-      final high = math.max(open, close) + 95.0;
-      final low = math.min(open, close) - 85.0;
+      final high = math.max(open, close) + 115.0;
+      final low = math.min(open, close) - 95.0;
       price = close;
       return OhlcvCandle(
         timestampMs: 1700000000000 + i * 60000,
@@ -37,7 +37,7 @@ class _ZeroChartShowcaseAppState extends State<ZeroChartShowcaseApp> {
         high: high,
         low: low,
         close: close,
-        volume: 120.0 + (i % 15) * 35.0,
+        volume: 140.0 + (i % 12) * 42.0,
       );
     });
 
@@ -45,17 +45,20 @@ class _ZeroChartShowcaseAppState extends State<ZeroChartShowcaseApp> {
     final rsi = TechnicalIndicators.rsi(closes, period: 14);
     _rsiPoints = List<ChartPoint>.generate(
       _candles.length,
-      (i) => ChartPoint(x: i.toDouble(), y: rsi[i] ?? 50.0),
+      (i) => ChartPoint(x: i.toDouble(), y: rsi[i] ?? 52.0),
     );
 
     _bids = List<OrderBookLevel>.generate(
-      24,
-      (i) => OrderBookLevel(price: 68400.0 - i * 15.0, quantity: 2.5 + i * 0.8),
+      20,
+      (i) => OrderBookLevel(price: 68400.0 - i * 15.0, quantity: 3.5 + i * 1.1),
     );
     _asks = List<OrderBookLevel>.generate(
-      24,
-      (i) => OrderBookLevel(price: 68420.0 + i * 15.0, quantity: 2.2 + i * 0.9),
+      20,
+      (i) => OrderBookLevel(price: 68420.0 + i * 15.0, quantity: 3.0 + i * 1.2),
     );
+
+    // Pre-activate synchronized multi-pane crosshair for instant visual clarity
+    _sync.updateCrosshair(normalizedX: 0.64, localY: 90.0);
   }
 
   @override
@@ -73,7 +76,19 @@ class _ZeroChartShowcaseAppState extends State<ZeroChartShowcaseApp> {
         backgroundColor: const Color(0xFF070910),
         appBar: AppBar(
           backgroundColor: const Color(0xFF0E1322),
-          title: const Text('zero_chart — 120Hz Multi-Pane Terminal'),
+          title: const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('zero_chart — 120Hz Multi-Pane Terminal', style: TextStyle(fontSize: 15, fontWeight: FontWeight.w800)),
+                  Text('BTC-PERP • OHLCV + Bollinger + RSI(14) + L2 Depth', style: TextStyle(fontSize: 11, color: Color(0xFF94A3B8))),
+                ],
+              ),
+              Text('+4.82%', style: TextStyle(color: Color(0xFF00E676), fontSize: 14, fontWeight: FontWeight.w900)),
+            ],
+          ),
         ),
         body: Column(
           children: [

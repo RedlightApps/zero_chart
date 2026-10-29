@@ -18,6 +18,10 @@
 
 📚 **Deep-Dive Guides:** [Full Architecture (`DOCUMENTATION.md`)](DOCUMENTATION.md) · [Türkçe Kılavuz (`doc/TR_GUIDE.md`)](doc/TR_GUIDE.md) · [English Guide (`doc/EN_GUIDE.md`)](doc/EN_GUIDE.md)
 
+<br/>
+
+<img src="https://raw.githubusercontent.com/RedlightApps/zero_chart/main/doc/screenshots/zero_chart_showcase.png" width="360" alt="zero_chart 120Hz Multi-Pane Financial Terminal Showcase"/>
+
 </div>
 
 ---
